@@ -53,5 +53,45 @@
 
 /* Components End */
 /* Header Start */
-
+  .header {
+    /* if you changed ur body color later this color will stay white */
+    background-color: white;
+    box-shadow: 0 0 10px #ddd;
+    /* For The element u will move it and dont want it to get outside the of header */
+    position: relative;
+  }
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* in the resposive li will go down to the logo */
+    flex-wrap: wrap;
+    /* for the mega-menu u want the parent full header or container header only */
+    position: relative;
+  }
+  .header .logo {
+    color: var(--font-color);
+    font-size: 25px;
+    font-weight: bold;
+    /* logo height is the same of the header height so if u change ul size the header will have the same height and not effect*/
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header .main-nav {
+    display: flex;
+  }
+  /* Direct selector will make u avoid the problem of the mega menu li a in side the main ul */
+  .header .main-nav > li > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Same Height as header For the fill effect*/
+    height: 72px;
+    position: relative;
+    color: black;
+    padding: 0 30px;
+    transition: var(--main-transition);
+  }
 /* Header End */
