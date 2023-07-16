@@ -80,9 +80,10 @@
     align-items: center;
   }
   @media (max-width:768px) {
-    .logo {
+    .header .logo {
       /* To take full width & flex wrap will work to the list */
       width: 100%;
+      /* if you type above .logo only height wont work so u want to add .header or use max-height */
       height: 50px;
     }
   }
@@ -133,3 +134,65 @@
   left: 0;
 }
 /* Header End */
+/* Start Landing */
+  .landing {
+    /* For the divider stay in the parent */
+    position: relative;
+  }
+  .landing::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+    z-index: -1;
+    transform: skewY(-6deg);
+    transform-origin: left top;
+  }
+  .landing .container {
+    /* 72px is header height */
+    min-height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    /* To move the items to up alittle */
+    padding-bottom: 120px;
+  }
+  .landing .text {
+    /* to grow as the left width after img*/
+    flex: 1;
+  }
+  .landing .text h1 {
+    font-size: 40px;
+    margin: 0;
+    letter-spacing: -2px;
+  }
+  .landing .text p {
+    font-size: 24px;
+    line-height: 1.7;
+    margin: 5px 0 0;
+    color: #333;
+    /* to no get bigger than 500 px */
+    max-width: 500px;
+  }
+  .landing .container .image img {
+    width: 600px;
+    max-width: 100%;
+  }
+  .landing .go-down {
+    color: var(--font-color);
+    position: absolute;
+    /* Move it alittle up */
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: var(--main-transition);
+  }
+  .landing .go-down:hover {
+    color: crimson;
+  }
+  .landing .go-down i {
+
+  }
+/* End Landing */
