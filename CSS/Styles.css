@@ -102,8 +102,10 @@
     align-items: center;
     /* Same Height as header For the fill effect*/
     height: 72px;
+    /* For the fill we will position it */
     position: relative;
     color: black;
+    /* We already did height so u dont need padding up and down */
     padding: 0 30px;
     transition: var(--main-transition);
     overflow: hidden;
@@ -122,7 +124,7 @@
     height: 4px;
     background-color: var(--font-color);
     top: 0;
-    /* To Get outside the element */
+    /* We already did height so u dont need padding up and down */
     left: -100%;
     transition: var(--main-transition);
 }
@@ -159,9 +161,22 @@
     /* To move the items to up alittle */
     padding-bottom: 120px;
   }
+  @media (max-width:991px) {
+    .landing .container {
+      flex-direction: column;
+      min-height: calc(20vh - 72px);
+    }
+  }
   .landing .text {
     /* to grow as the left width after img*/
     flex: 1;
+  }
+  @media (max-width:991px) {
+    .landing .text {
+      text-align: center;
+      /* For Animation dont touch the text */
+      margin-bottom: 50px;
+    }
   }
   .landing .text h1 {
     font-size: 40px;
@@ -179,6 +194,9 @@
   .landing .container .image img {
     width: 600px;
     max-width: 100%;
+    /* Animation need the position */
+    position: relative;
+    animation: up-and-down 5s linear infinite;
   }
   .landing .go-down {
     color: var(--font-color);
@@ -193,6 +211,22 @@
     color: crimson;
   }
   .landing .go-down i {
-
+    animation: bouncing 1.5s infinite;
+  }
+  @keyframes up-and-down {
+    0%,100% {
+      top: 0;
+    }
+    50% {
+      top: -50px;
+    }
+  }
+  @keyframes bouncing {
+    0%,10%,20%,50%,80%,100% {
+      transform: translateY(0);
+    }
+    40%,60% {
+      transform: translateY(-10px);
+    }
   }
 /* End Landing */
