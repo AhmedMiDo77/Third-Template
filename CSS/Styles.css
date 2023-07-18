@@ -135,6 +135,46 @@
 .header .main-nav > li > a:hover::before {
   left: 0;
 }
+.header .mega-menu {
+  /* To make it get outside of the work flow */
+  position: absolute;
+  width: 100%;
+  left: 0;
+  padding: 30px;
+  background-color: white;
+  border-bottom: 3px solid var(--font-color);
+  z-index: 100;
+  display: flex;
+  gap: 40px;
+  top: calc(100% + 50px);
+  transition: top var(--main-transition), opacity var(--main-transition) ;
+}
+.header .mega-menu .image img {
+  /* To Resize it inside the parent */
+  max-width: 100%;
+}
+.header .mega-menu .links {
+  /* to avoid flex wrap on option names */
+}
+.header .mega-menu .links li {
+  /* For Fill Background */
+}
+.header .mega-menu .links li::before {
+  content: "";
+}
+.header .mega-menu .links li:hover::before {
+  
+}
+.header .mega-menu .links li a {
+  color: var(--font-color);
+  display: block;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.header .mega-menu .links li a i{
+  margin-right: 10px;
+}
 /* Header End */
 /* Start Landing */
   .landing {
