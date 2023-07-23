@@ -558,7 +558,7 @@
   .features .box h2::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -20px;
     left: 15px;
     height: 5px;
     background-color: red;
