@@ -561,7 +561,6 @@
     bottom: -20px;
     left: 15px;
     height: 5px;
-    background-color: red;
     /* 15px left 15px right */
     width: calc(100% - 30px);
   }
@@ -574,7 +573,7 @@
   }
   .features .box a {
     display: block;
-    border: 3px solid red;
+    border: 3px solid;
     width: fit-content;
     margin: 0 auto 30px;
     font-size: 20px;
