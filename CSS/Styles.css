@@ -592,6 +592,7 @@
     color: #f44036;
     border-color: #f44036;
     /* For the fill effect */
+    /* 50% to right red (200% 100%) then back 50% to left white (200% 100%)*/
     background: linear-gradient(to right, #f44036 50%, white 50%);
     background-size: 200% 100%;
     background-position: right bottom;
@@ -629,5 +630,51 @@
     color: white;
   }
 /* End Features */
+/* Start Testimonials */
+  .testimonials {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    position: relative;
+    background-color: var(--background-color);
+  }
+  .testimonials .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 30px;
+  }
+  .testimonials .box {
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 7%);
+    border-radius: 6px;
+    /* To Re Positon of the image in side it */
+    position: relative;
+  }
+  .testimonials .box img {
+    position: absolute;
+    right: -10px;
+    top: -50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid var(--background-color);
+  }
+  .testimonials .box h3 {
+    margin: 0 0 10px;
+  }
+  .testimonials .box .title {
+    color: #555;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .testimonials .box .rate .filled {
+    color: #FFC107;
+  }
+  .testimonials .box p {
+    line-height: 1.5;
+    color: #777;
+    margin-top: 10px;
+  }
+/* End Testimonials */
 
 
