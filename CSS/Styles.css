@@ -676,5 +676,94 @@
     margin-top: 10px;
   }
 /* End Testimonials */
+/* Start Team Members */
+  .team-members {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--main-transition);
+    position: relative;
+  }
+  .team-members .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 30px;
+  }
+  .team-members .box {
+    position: relative;
+  }
+  .team-members .box::before,
+  .team-members .box::after {
+    content: "";
+    position: absolute;
+    background-color: #f3f3f3;
+    right: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 10px;
+    transition: var(--main-transition);
+  }
+  .team-members .box::before {
+    width: calc(100% - 60px);
+    /* Cuz after will be on it*/
+    z-index: -2;
+  }
+  .team-members .box::after {
+    z-index: -1;
+    background-color: #e4e4e4;
+    width: 0;
+  }
+  .team-members .box:hover::after {
+    width: calc(100% - 60px);
+  }
+  .team-members .box .data {
+    display: flex;
+    align-items: center;
+    padding-top: 60px;
+  }
+  .team-members .box .data img {
+    max-width: calc(100% - 60px);
+    transition: var(--main-transition);
+    border-radius: 10px;
+  }
+  .team-members .box:hover img {
+    filter: grayscale(100%);
+  }
+  .team-members .box .data .social {
+    /* The width u left */
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .team-members .box .data .social a {
+    width: 60px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .team-members .box .data .social a:hover i {
+    color: var(--font-color);
+  }
+  .team-members .box .data .social i {
+    color: #777;
+    transition: var(--main-transition);
+  }
+  .team-members .box .info {
+    padding-left: 80px;
+  }
+  .team-members .box .info h3 {
+    padding-top: 20px;
+    color: var(--font-color);
+    font-size: 22px;
+    transition: var(--main-transition);
+  }
+  .team-members .box .info p {
+    margin: 10px 0 25px 0;
+  }
+  .team-members .box:hover .info h3 {
+    color: #777;
+  }
+/* End Team Members */
 
 
