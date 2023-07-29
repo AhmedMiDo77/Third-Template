@@ -695,6 +695,7 @@
     content: "";
     position: absolute;
     background-color: #f3f3f3;
+    /* Cuz u want to cut 60px from the left */
     right: 0;
     top: 0;
     height: 100%;
@@ -717,6 +718,7 @@
   .team-members .box .data {
     display: flex;
     align-items: center;
+    /* To Collapse the padding of the before element */
     padding-top: 60px;
   }
   .team-members .box .data img {
