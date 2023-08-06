@@ -1140,6 +1140,7 @@
   .pricing .box:hover::after  {
     width: 100%;
   }
+  /* This is the best way so when u go to mob view they will be all same positions */
 @media (min-width:1200px) {
   .pricing .box.popular {
     top: -20px;
