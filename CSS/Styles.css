@@ -352,7 +352,7 @@
     .landing .text {
       text-align: center;
       /* For Animation dont touch the text */
-      margin-bottom: 50px;
+        margin: 20px auto 50px;
     }
   }
   .landing .text h1 {
@@ -620,7 +620,7 @@
     color: #f44036;
     border-color: #f44036;
     /* For the fill effect */
-    /* 50% to right red (200% 100%) then back 50% to left white (200% 100%)*/
+    /* 50% Red to right with width & height 100% then when hover on it we change color of element and background position to left so white 50% can work*/
     background: linear-gradient(to right, #f44036 50%, white 50%);
     background-size: 200% 100%;
     background-position: right bottom;
