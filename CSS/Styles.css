@@ -707,7 +707,7 @@
 /* Start Team Members */
   .team-members {
     padding-top: var(--section-padding);
-    padding-bottom: var(--main-transition);
+    padding-bottom: var(--section-padding);
     position: relative;
   }
   .team-members .container {
