@@ -1431,6 +1431,7 @@
   }
   .discount .form {
     display: flex;
+    /* Align Items will center the inputs with their display block and width 100% */
     align-items: center;
     justify-content: center;
     flex-basis: 50%;
