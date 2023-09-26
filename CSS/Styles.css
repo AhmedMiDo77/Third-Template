@@ -1103,6 +1103,7 @@
     }
   }
   /* Focus wont work on [] selector you can replace input:focus or any class:focus */
+  /* inline style width will work too */
   .events .subscribe form input[type="email"]:focus {
     outline: none;
   }
